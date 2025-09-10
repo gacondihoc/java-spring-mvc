@@ -100,10 +100,11 @@ public class ProductController {
             BindingResult newProductBindingResult,
             @RequestParam("productImageFile") MultipartFile file) {
 
-        List<FieldError> errors = newProductBindingResult.getFieldErrors();
-        for (FieldError error : errors) {
-            System.out.println(">>>>> " + error.getField() + " - " + error.getDefaultMessage());
-        }
+        // List<FieldError> errors = newProductBindingResult.getFieldErrors();
+        // for (FieldError error : errors) {
+        // System.out.println(">>>>> " + error.getField() + " - " +
+        // error.getDefaultMessage());
+        // }
 
         if (newProductBindingResult.hasErrors()) {
             return "/admin/product/create";
